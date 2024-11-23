@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome Home.</title>
-    <link href="charlieboard.css" rel="stylesheet" />
+    @vite(['resources/css/charlieboard.css', 'resources/js/charlieboard.js'])
 </head>
 
 <body>
@@ -89,6 +89,6 @@
 
 </body>
 
-<script src="charlieboard.js"></script>
+<script src="{{asset('js/charlieboard.js')}}"></script>
 
 </html>

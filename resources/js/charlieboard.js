@@ -1,15 +1,15 @@
 //init the stuff
 const images = document.querySelectorAll('.draggable');
 const itemsBox = document.getElementById('itemsBox');
-const soundPickUp = new Audio('sfx/pickup.mp3');
-const soundDrop = new Audio('sfx/dropped.mp3');
+const soundPickUp = new Audio('/sfx/pickup.mp3');
+const soundDrop = new Audio('/sfx/dropped.mp3');
 soundPickUp.volume = 0.2;
 soundDrop.volume = 0.1;
 
 
-const lightsoff = new Audio('sfx/lightsoff.mp3');
-const lightson = new Audio('sfx/lightson.mp3');
-const soundPurr = new Audio('sfx/purr.mp3');
+const lightsoff = new Audio('/sfx/lightsoff.mp3');
+const lightson = new Audio('/sfx/lightson.mp3');
+const soundPurr = new Audio('/sfx/purr.mp3');
 soundPurr.volume = 0.5;
 
 
@@ -23,12 +23,12 @@ const cuerdas = [
 ];
 
 
-const soundCuerdaE = new Audio('sfx/cuerdas/cuerdaE.mp3');
-const soundCuerdaA = new Audio('sfx/cuerdas/cuerdaA.mp3');
-const soundCuerdaD = new Audio('sfx/cuerdas/cuerdaD.mp3');
-const soundCuerdaG = new Audio('sfx/cuerdas/cuerdaG.mp3');
-const soundCuerdaB = new Audio('sfx/cuerdas/cuerdaB.mp3');
-const soundCuerdaEe = new Audio('sfx/cuerdas/cuerdaEe.mp3');
+const soundCuerdaE = new Audio('/sfx/cuerdas/cuerdaE.mp3');
+const soundCuerdaA = new Audio('/sfx/cuerdas/cuerdaA.mp3');
+const soundCuerdaD = new Audio('/sfx/cuerdas/cuerdaD.mp3');
+const soundCuerdaG = new Audio('/sfx/cuerdas/cuerdaG.mp3');
+const soundCuerdaB = new Audio('/sfx/cuerdas/cuerdaB.mp3');
+const soundCuerdaEe = new Audio('/sfx/cuerdas/cuerdaEe.mp3');
 
 soundCuerdaE.volume = 0.4;
 soundCuerdaA.volume = 0.4;
@@ -325,7 +325,7 @@ function sticky(color) {
         var imgTop = sticky.style.top;
         var imgLeft = sticky.style.left;
         var newDiv = document.createElement('div');
-        newDiv.innerHTML = '<img src="img/' + color + '-one.png"/>'
+        newDiv.innerHTML = '<img src="/img/' + color + '-one.png"/>'
 
 
         newDiv.classList.add('draggable');
@@ -469,8 +469,8 @@ function changeBg() {
 document.getElementById('gata').addEventListener('click', function () {
     soundPurr.play();
     const img = this;
-    const srcOriginal = 'img/gata.png';
-    const srcNuevo = 'img/gata-2.png';
+    const srcOriginal = '/img/gata.png';
+    const srcNuevo = '/img/gata-2.png';
 
     //cambiar a la nueva imagen
     img.src = srcNuevo;
