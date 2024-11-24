@@ -10,6 +10,13 @@
     @vite(['resources/css/charlieboard.css', 'resources/js/charlieboard.js'])
 </head>
 
+<style>
+    html {
+        background-image: url('{{ asset('img/bg/bg-paper.jpg') }}');
+    }
+</style>
+
+
 <body>
 
 
@@ -89,6 +96,5 @@
 
 </body>
 
-<script src="{{asset('js/charlieboard.js')}}"></script>
 
 </html>

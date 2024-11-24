@@ -1,15 +1,17 @@
 //init the stuff
+console.log('charlieboard START!!');
+
 const images = document.querySelectorAll('.draggable');
 const itemsBox = document.getElementById('itemsBox');
-const soundPickUp = new Audio('/sfx/pickup.mp3');
-const soundDrop = new Audio('/sfx/dropped.mp3');
+const soundPickUp = new Audio('sfx/pickup.mp3');
+const soundDrop = new Audio('sfx/dropped.mp3');
 soundPickUp.volume = 0.2;
 soundDrop.volume = 0.1;
 
 
-const lightsoff = new Audio('/sfx/lightsoff.mp3');
-const lightson = new Audio('/sfx/lightson.mp3');
-const soundPurr = new Audio('/sfx/purr.mp3');
+const lightsoff = new Audio('sfx/lightsoff.mp3');
+const lightson = new Audio('sfx/lightson.mp3');
+const soundPurr = new Audio('sfx/purr.mp3');
 soundPurr.volume = 0.5;
 
 
@@ -23,12 +25,12 @@ const cuerdas = [
 ];
 
 
-const soundCuerdaE = new Audio('/sfx/cuerdas/cuerdaE.mp3');
-const soundCuerdaA = new Audio('/sfx/cuerdas/cuerdaA.mp3');
-const soundCuerdaD = new Audio('/sfx/cuerdas/cuerdaD.mp3');
-const soundCuerdaG = new Audio('/sfx/cuerdas/cuerdaG.mp3');
-const soundCuerdaB = new Audio('/sfx/cuerdas/cuerdaB.mp3');
-const soundCuerdaEe = new Audio('/sfx/cuerdas/cuerdaEe.mp3');
+const soundCuerdaE = new Audio('sfx/cuerdas/cuerdaE.mp3');
+const soundCuerdaA = new Audio('sfx/cuerdas/cuerdaA.mp3');
+const soundCuerdaD = new Audio('sfx/cuerdas/cuerdaD.mp3');
+const soundCuerdaG = new Audio('sfx/cuerdas/cuerdaG.mp3');
+const soundCuerdaB = new Audio('sfx/cuerdas/cuerdaB.mp3');
+const soundCuerdaEe = new Audio('sfx/cuerdas/cuerdaEe.mp3');
 
 soundCuerdaE.volume = 0.4;
 soundCuerdaA.volume = 0.4;
@@ -143,7 +145,6 @@ function enableInteract() {
         image.addEventListener('mouseover', mouseOver);
 
         image.addEventListener('touchstart', startDrag, { passive: false });
-
     });
 }
 
@@ -205,7 +206,7 @@ function startDrag(e) {
     this.style.zIndex = zIndex++;
 
     // Start dragging
-    isDragging = false;
+    let isDragging = false;
 
 
     //transformation stuff
@@ -291,12 +292,12 @@ function startDrag(e) {
 
 }
 
-//prevents link from opening if the user has dragged the thing
-this.addEventListener('click', function (e) {
-    if (isDragging) {
-        e.preventDefault(); // Prevent the link from being activated
-    }
-});
+// //prevents link from opening if the user has dragged the thing
+// this.addEventListener('click', function (e) {
+//     if (isDragging) {
+//         e.preventDefault(); // Prevent the link from being activated
+//     }
+// });
 
 
 
@@ -444,7 +445,7 @@ function paint(toolname) {
 }
 
 
-bgArray = ['paper', 'balcony', 'hmas', 'paper', 'sea', 'street', 'street2', 'sun'];
+let bgArray = ['paper', 'balcony', 'hmas', 'paper', 'sea', 'street', 'street2', 'sun'];
 
 function changeBg() {
     let newBg = bgArray[Math.floor(Math.random() * 8)];
